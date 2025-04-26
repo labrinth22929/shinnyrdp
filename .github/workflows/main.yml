@@ -12,9 +12,6 @@ jobs:
       - name: Extract ngrok
         run: Expand-Archive ngrok.zip
 
-      - name: Check ngrok version
-        run: .\ngrok.exe version
-
       - name: Auth ngrok
         run: .\ngrok.exe authtoken ${{ secrets.NGROK_AUTH_TOKEN }}
 
